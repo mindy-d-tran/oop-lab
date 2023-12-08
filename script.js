@@ -1,3 +1,11 @@
+class Character {
+    constructor(name){
+        this.name = name;
+        this.health = 100;
+        this.inventory = [];
+    }
+}
+
 // Part 1: Humble Beginnings
 const adventurer = {
     name: "Robin",
