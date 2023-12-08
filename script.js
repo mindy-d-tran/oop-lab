@@ -11,7 +11,26 @@ class Character {
 
 }
 
-const robin = new Character("Robin");
+class Adventurer extends Character {
+    constructor (name, role, lv){
+        super(name);
+        this.role = role;
+        this.level = lv;
+        this.inventory.push("bedroll", "50 gold coins");
+    }
+
+    scout () {
+        console.log(`${this.name} is scouting ahead...`);
+        super.roll();
+    }
+}
+class Companion extends Character{
+    constructor(name, type){
+        super(name);
+        this.type = type;
+    }
+}
+const robin = new Adventurer("Robin");
 robin.inventory = ["sword", "potion", "artifact"];
 robin.companion = new Character("Leo");
 robin.companion.type = "Cat";
